@@ -32,7 +32,7 @@
   "bugs": {
     "url": "https://github.com/creativetimofficial/nextjs-material-kit/issues"
   },
-  "homepage": "https://farleir.github.io/nextjs-github-pages",
+  "homepage": "http://next.js.farleir.com/",
   "dependencies": {
     "@material-ui/core": "4.11.4",
     "@material-ui/icons": "4.11.2",
