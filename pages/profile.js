@@ -17,6 +17,8 @@ import HeaderLinks from "/components/Header/HeaderLinks.js";
 import NavPills from "/components/NavPills/NavPills.js";
 import Parallax from "/components/Parallax/Parallax.js";
 
+import { prefix } from '../../utils/prefix.js';
+
 import styles from "/styles/jss/nextjs-material-kit/pages/profilePage.js";
 
 const useStyles = makeStyles(styles);
@@ -43,7 +45,7 @@ export default function ProfilePage(props) {
         }}
         {...rest}
       />
-      <Parallax small filter image="/img/profile-bg.jpg" />
+      <Parallax small filter image="${prefix}/img/profile-bg.jpg" />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
           <div className={classes.container}>
