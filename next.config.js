@@ -2,9 +2,9 @@
 const nextConfig = {
   reactStrictMode: true
 };
-module.exports = {
-  basePath: '/nextjs-github-pages',
-  assetPrefix: '/nextjs-github-pages'
+module.exports {
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH,
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH
 }
 
 module.exports = nextConfig;

@@ -13,6 +13,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_BASE_PATH: /nextjs-github-pages
 
     strategy:
       matrix:
@@ -27,13 +29,13 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: npm run build --if-present
+    - run: npm run build
     - run: npm run export
     - run: touch ./out/.nojekyll
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
           folder: out # The folder the action should deploy.
